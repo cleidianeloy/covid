@@ -18,7 +18,8 @@ const porcentagem = (resposta) => {
     populacao_vacinada = resposta.All.people_vaccinated;
     porcentagem_vacinados = (populacao_vacinada / populacao) * 100;
     divResposta = document.querySelector("#resposta")
-    if(0.8 * populacao <= porcentagem_vacinados){
+    if(porcentagem_vacinados > 80){
+        
         console.log("pode lamber corrimão");
         divResposta.innerHTML= "<h1 style='font-size: 3rem'>Pode lamber corrimão</h1> a porcentagem de vacinados contra o covid no Brasil é: "
         + porcentagem_vacinados.toFixed(2) + "%";

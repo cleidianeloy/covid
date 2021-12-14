@@ -1,11 +1,41 @@
+<style>
+    #animacaoCovid{
+        width: 100px;
+        height: auto;
+        animation-name: carregando;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    #resposta{
+        text-align: center;
+        margin:25vh auto; 
+        font-size:1.5rem;
+        
+
+    }
+    @keyframes carregando{
+        0%{
+            transform: rotate(0deg);
+        }
+        25%{
+            transform: rotate(25deg)
+        }
+        50%{
+            transform: rotate(-25deg)
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+</style>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>pode lamber corrimão?</title>
     </head>
     <body>
-        <div id="resposta" style="text-align: center; margin:25vh auto; font-size:1.5rem">
-            
+        <div id="resposta" >
+            <img id="animacaoCovid" src="./img/covid.png"alt="Imagem de um virus do covid com uma mascara">
         </div>
     </body>
     <script src="api.js"></script>    
